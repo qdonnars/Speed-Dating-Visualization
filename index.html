@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/ >
+		<title>Comment trouver l'âme soeur</title>
+
+		<!-- Google fonts -->
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="shortcut icon" href="/donkey.ico">
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+		<!-- D3.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+
+	</head>
+	<body>
+
+	<h1>Welcome to the best interactive spider vizualisation of a speed datting study. Fell free to display anything you want in order to compare as many results along time, gender and questions.</h1>
+
+		<div class="control-group-gender">
+			<h1>Gender</h1>
+			<label class="control control--radio">Men
+				<input type="radio"
+							 name="gender"
+							 onclick="gender = 1"
+							 id="gender1">
+				<div class="control__indicator"></div>
+			</label>
+			<label class="control control--radio">Women
+				<input type="radio"
+							 name="gender"
+							 onclick="gender = 0"
+							 id="gender2">
+				<div class="control__indicator"></div>
+			</label>
+		</div>
+
+		<div class="control-group-time">
+			<h1>Moment of the question</h1>
+			<label class="control control--radio">Start of speed dating
+				<input type="radio"
+							 name="time"
+							 id="time1"
+ 							 onclick="time = '1'">
+				<div class="control__indicator"></div>
+			</label>
+			<label class="control control--radio">End of speed dating
+				<input type="radio"
+							 name="time"
+							 onclick="time = '2'"
+							 id="time2">
+				<div class="control__indicator"></div>
+			</label>
+			<label class="control control--radio">3 weeks after the speed dating
+				<input type="radio"
+							 name="time"
+							 onclick="time = '3'"
+							 id="time3">
+				<div class="control__indicator"></div>
+			</label>
+		</div>
+
+		<div class="control-group-question">
+			<h1>Question itself</h1>
+			<label class="control control--radio">What individuals think they look for
+				<input type="radio"
+							 name="question"
+							 id="question1"
+							 onclick="question = '1'">
+				<div class="control__indicator"></div>
+			</label>
+			<label class="control control--radio">What individuals think the oposite gender looks for
+				<input type="radio"
+							 name="question"
+							 onclick="question = '2'"
+							 id="question2">
+				<div class="control__indicator"></div>
+			</label>
+			<label class="control control--radio">How individials think they measure up
+				<input type="radio"
+							 name="question"
+							 onclick="question = '3'"
+							 id="question3">
+				<div class="control__indicator"></div>
+			</label>
+			<label class="control control--radio">Individuals presumption about what their gender looks for
+				<input type="radio"
+							 name="question"
+							 id="question4"
+							 onclick="question = '4'">
+				<div class="control__indicator"></div>
+			</label>
+			<label class="control control--radio">How individuals think the oposite gender perceives them
+				<input type="radio"
+							 name="question"
+							 onclick="question = '5'"
+							 id="question5">
+				<div class="control__indicator"></div>
+			</label>
+			<label class="control control--radio">What individuals think they based their judgment on
+				<input type="radio"
+							 name="question"
+							 onclick="question = '7'"
+							 id="question6">
+				<div class="control__indicator"></div>
+			</label>
+		</div>
+
+
+		<div class="control-group-display">
+			<h1>Display Options</h1>
+			<label class="button" onclick="updateQuery(gender, time, question)">Add and display</label>
+			<label class="button" onclick="clearQuery()">Clear and display</label>
+		</div>
+
+		<div class="radarChart"></div>
+
+		<script src="js/radarChart.js"></script>
+		<script src= "script.js"></script>
+
+	</body>
+</html>
